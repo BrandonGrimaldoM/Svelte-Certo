@@ -1,6 +1,5 @@
 <swiper-container
     initialSlide={2}
-	pagination="true"
 	effect="coverflow"
 	grab-cursor="true"
 	centered-slides="true"

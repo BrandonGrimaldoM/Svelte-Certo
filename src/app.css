@@ -81,6 +81,8 @@ h5 {
 
 
 
+
+
 body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -95,8 +97,7 @@ body {
 
 swiper-container {
     width: 100%;
-    height: 625px;
-    padding-top: 84px;
+    height: auto;
 }
 
 swiper-slide {
@@ -141,3 +142,4 @@ swiper-slide {
 .swiper-pagination-bullet-active {
     background: #02033B;
 }
+
