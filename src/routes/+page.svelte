@@ -1,8 +1,7 @@
 <script>
-	let isOpen = $state(false);
-	const handleMenu = () => {
-		isOpen = !isOpen;
-	};
+	import Button from '../components/Button.svelte';
+	import SpecialButton from '../components/SpecialButton.svelte';
+	import Swiper from '../components/Swiper.svelte';
 </script>
 
 <svelte:head>
@@ -11,99 +10,191 @@
 		name="description"
 		content="Think your phone has been hacked? Our trusted apps make it easy for you to scan, detect and remove threats from your iPhone and Android devices."
 	/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </svelte:head>
 
-<header class="w-full h-[102px] min-[1095px]:px-[120px] lg:px-14 px-6 py-6">
-	<nav class="flex max-[864px]:hidden justify-between items-center">
-		<img src="/images/logo.png" alt="logo" />
-		<ul class="flex items-center gap-12">
-			<li><a href="/">iPhone</a></li>
-			<li><a href="/">Android</a></li>
-			<li><a href="/">Help</a></li>
-			<li class="flex items-center gap-[9px]">
-				<a href="/">Company</a>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="13"
-					height="8"
-					viewBox="0 0 13 8"
-					fill="none"
-				>
-					<g clip-path="url(#clip0_30_8657)">
-						<path
-							d="M6.04591 5.36L10.5859 0.820005C10.7469 0.660619 10.9643 0.571213 11.1909 0.571213C11.4175 0.571213 11.6349 0.660619 11.7959 0.820005C11.9536 0.983942 12.0416 1.20256 12.0416 1.43C12.0416 1.65745 11.9536 1.87607 11.7959 2.04L6.65591 7.18001C6.49749 7.33276 6.28599 7.41812 6.06591 7.41812C5.84584 7.41812 5.63434 7.33276 5.47591 7.18001L0.295913 2.04C0.215791 1.96093 0.152172 1.86674 0.10875 1.76288C0.0653286 1.65902 0.0429687 1.54757 0.0429688 1.435C0.0429687 1.32244 0.0653286 1.21099 0.10875 1.10713C0.152172 1.00327 0.215791 0.909075 0.295913 0.830005C0.374984 0.749882 0.469182 0.686264 0.573039 0.642842C0.676897 0.59942 0.788344 0.57706 0.900913 0.57706C1.01348 0.57706 1.12493 0.59942 1.22879 0.642842C1.33264 0.686264 1.42684 0.749882 1.50591 0.830005L6.04591 5.36Z"
-							fill="black"
-						/>
-					</g>
-					<defs>
-						<clipPath id="clip0_30_8657">
-							<rect
-								width="12"
-								height="6.86"
-								fill="white"
-								transform="translate(0.046875 0.570007)"
-							/>
-						</clipPath>
-					</defs>
-				</svg>
-			</li>
-			<li class="ml-[48px]">
-				<a href="/" class="flex py-4 px-5 text-white rounded-[42px] bg-[#4335DE]">Sign in</a>
-			</li>
-		</ul>
-	</nav>
-
-	<nav class="min-[864px]:hidden flex justify-between items-center">
-		<img src="/images/logo.png" alt="logo" />
-		<button onclick={handleMenu} aria-label="Open menu">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke-width="1.5"
-				stroke="currentColor"
-				class="size-10"
-				aria-hidden="true"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-				/>
-			</svg>
-		</button>
-	</nav>
-
-	<div
-		class={`w-full h-screen absolute top-0 left-0 z-50 bg-white ${isOpen ? 'block' : 'hidden'} `}
-	>
-		<div class="w-full h-auto p-6 flex justify-end">
-			<button onclick={handleMenu} aria-label="Open menu">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="size-10"
-				>
-					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-				</svg>
-			</button>
+<section class="pl-[192px] pt-[134px] flex justify-between">
+	<article class="w-[585px]">
+		<h1 class="pb-[52px]">Your mobile privacy is our mission</h1>
+		<p class="pb-[96px]">
+			Think your phone has been hacked? Our trusted apps make it easy for you to scan, detect and
+			remove threats from your iPhone and Android devices.
+		</p>
+		<div class="flex justify-start gap-[48px]">
+			<Button type="yellow" arrow={true}>Get Certo for iPhone</Button>
+			<Button type="white" arrow={false}>Get Certo for Android</Button>
 		</div>
+	</article>
+	<img src="/images/main-section.png" alt="main" />
+</section>
 
-		<div class="grid place-content-center">
-			<ul class="flex flex-col gap-12 pt-36">
-				<li><a href="/">iPhone</a></li>
-				<li><a href="/">Android</a></li>
-				<li><a href="/">Help</a></li>
-				<li class="flex items-center gap-[9px]">
-					<a href="/">Company</a>
-				</li>
-				<li>
-					<a href="/">Sign in</a>
-				</li>
-			</ul>
+<section class="gradientYellow">
+	<h2 class=" py-[83px] px-[96px]">Loved by thousands of iPhone <br /> and Android users alike</h2>
+
+	<Swiper />
+
+	<div class="flex justify-between py-[83px] px-[96px]">
+		<h4 class="pt-9">Featured in:</h4>
+		<div class="flex gap-9">
+			<img src="/images/figure.png" alt="logos" decoding="async" loading="lazy" />
+			<img src="/images/figure-2.png" alt="logos" decoding="async" loading="lazy" />
+			<img src="/images/figure-3.png" alt="logos" decoding="async" loading="lazy" />
+			<img src="/images/figure-4.png" alt="logos" decoding="async" loading="lazy" />
+			<img src="/images/figure-5.png" alt="logos" decoding="async" loading="lazy" />
+			<img src="/images/figure-6.png" alt="logos" decoding="async" loading="lazy" />
 		</div>
 	</div>
-</header>
+</section>
+
+<section class="px-[192px] py-[134px] flex justify-between">
+	<article class="w-[440px]">
+		<h2 class="pb-[43px]">At Certo, mobile security is not an afterthought, it’s what we do.</h2>
+		<p class="pb-[76px]">
+			With years of experience in mobile security and spyware detection, our products have helped
+			countless people safeguard their devices and find peace of mind.
+		</p>
+		<div class="flex flex-col justify-start items-start gap-6">
+			<Button type="yellow" arrow={true}>Get Certo for iPhone</Button>
+			<Button type="white" arrow={false}>Get Certo for Android</Button>
+		</div>
+	</article>
+	<img src="/images/cel.png" alt="cel" />
+</section>
+
+<section class="py-[84px]">
+	<h2 class="text-center pb-[72px]">Get your freedom back, stop mobile spyware today</h2>
+	<div class="w-[840px] p-[72px] my-0 mx-auto rounded-[48px] bg-white shadow-mini">
+		<div class="flex gap-[48px] flex-wrap">
+			<article class="flex flex-col justify-center items-center gap-6 w-[200px] px-[1px]">
+				<img src="/images/spy.png" alt="spy-icon" decoding="async" loading="lazy" />
+				<h5 class="text-center">Spyware detection</h5>
+				<p class="text-base text-center">
+					Our advanced spyware detection engine can identify if a device contains spyware or bugging
+					software.
+				</p>
+			</article>
+
+			<article class="flex flex-col justify-center items-center gap-6 w-[200px] px-[1px]">
+				<img src="/images/spy2.png" alt="spy-icon" decoding="async" loading="lazy" />
+				<h5 class="text-center">Spyware detection</h5>
+				<p class="text-base text-center">
+					Our advanced spyware detection engine can identify if a device contains spyware or bugging
+					software.
+				</p>
+			</article>
+
+			<article class="flex flex-col justify-center items-center gap-6 w-[200px] px-[1px]">
+				<img src="/images/spy3.png" alt="spy-icon" decoding="async" loading="lazy" />
+				<h5 class="text-center">Spyware detection</h5>
+				<p class="text-base text-center">
+					Our advanced spyware detection engine can identify if a device contains spyware or bugging
+					software.
+				</p>
+			</article>
+
+			<article class="flex flex-col justify-center items-center gap-6 w-[200px] px-[1px]">
+				<img src="/images/spy4.png" alt="spy-icon" decoding="async" loading="lazy" />
+				<h5 class="text-center">Spyware detection</h5>
+				<p class="text-base text-center">
+					Our advanced spyware detection engine can identify if a device contains spyware or bugging
+					software.
+				</p>
+			</article>
+
+			<article class="flex flex-col justify-center items-center gap-6 w-[200px] px-[1px]">
+				<img src="/images/spy5.png" alt="spy-icon" decoding="async" loading="lazy" />
+				<h5 class="text-center">Spyware detection</h5>
+				<p class="text-base text-center">
+					Our advanced spyware detection engine can identify if a device contains spyware or bugging
+					software.
+				</p>
+			</article>
+
+			<article class="flex flex-col justify-center items-center gap-6 w-[200px] px-[1px]">
+				<img src="/images/spy6.png" alt="spy-icon" decoding="async" loading="lazy" />
+				<h5 class="text-center">Spyware detection</h5>
+				<p class="text-base text-center">
+					Our advanced spyware detection engine can identify if a device contains spyware or bugging
+					software.
+				</p>
+			</article>
+		</div>
+
+		<div class="flex justify-center items-center gap-6 pt-[96px]">
+			<Button type="yellow" arrow={true}>Get Certo for iPhone</Button>
+			<Button type="white" arrow={false}>Get Certo for Android</Button>
+		</div>
+	</div>
+</section>
+
+<section class="py-[84px] p-5">
+	<div class="my-0 mx-auto flex justify-center flex-wrap items-center gap-[72px]">
+		<article class="rounded-[48px] w-[460px] p-[48px] gradientYellow">
+			<h4 class="pb-[25px]">Read our story</h4>
+			<p class="text-base pb-[48px]">
+				Find out why thousands trust Certo to secure their mobile world.
+			</p>
+			<Button type="purple" arrow={true}>About us</Button>
+		</article>
+		<article class="rounded-[48px] w-[460px] p-[48px]">
+			<h4 class="pb-[25px]">Help Center</h4>
+			<p class="text-base pb-[48px]">Help topics, getting started guides and FAQs.</p>
+			<Button type="white" arrow={false}>Visit help center</Button>
+		</article>
+	</div>
+</section>
+
+<section class="gradientBlue py-[84px]">
+	<article class="my-0 mx-auto flex flex-col justify-center items-center gap-14">
+		<h2 class="text-white">Is someone spying on your phone?</h2>
+		<p class="text-white">Find out with Certo</p>
+		<div class="flex justify-center items-center gap-6">
+			<Button type="yellow" arrow={true}>Get Certo for iPhone</Button>
+			<Button type="white-dos" arrow={false}>Get Certo for Android</Button>
+		</div>
+	</article>
+</section>
+
+<section class="py-[84px]">
+	<h2 class="text-[56px] text-center">Latest insights</h2>
+	<div class="flex justify-center gap-[48px] my-[72px]">
+		<article class="w-[320px] rounded-[40px] overflow-hidden relative">
+			<img src="/images/in.png" alt="insights" />
+			<div class="p-[48px]">
+				<h4>Signs Your Ex Is Spying On You</h4>
+				<p class="text-base">
+					In an ideal world, after a relationship ends both you and your ex will move on. But what
+					if they can’t let go, and start spying on your...
+				</p>
+			</div>
+            <SpecialButton>Expertise</SpecialButton>
+		</article>
+
+		<article class="w-[320px] rounded-[40px] overflow-hidden relative">
+			<img src="/images/in2.png" alt="insights" />
+			<div class="p-[48px]">
+				<h4>How to Remove a Hacker from Your Samsung Phone</h4>
+				<p class="text-base">
+					Samsung is the second most popular manufacturer of smartphones in the world, with a market
+					share of 28.19% compared to Apple’s 28.43% as...
+				</p>
+			</div>
+            <SpecialButton>Guides</SpecialButton>
+		</article>
+
+		<article class="w-[320px] rounded-[40px] overflow-hidden relative">
+			<img src="/images/in3.png" alt="insights" />
+			<div class="p-[48px]">
+				<h4>Is Your Cell Phone Under Surveillance?</h4>
+				<p class="text-base">
+					In today’s surveillance state, it can feel like your every move is being watched. Although
+					your mind may be conjuring up images of CCTV...
+				</p>
+			</div>
+            <SpecialButton>Expertise</SpecialButton>
+		</article>
+	</div>
+    <div class="flex justify-center">
+        <Button type="yellow" arrow={true}>View all insights</Button>
+    </div>
+</section>

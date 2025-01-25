@@ -17,3 +17,127 @@ li a {
     font-weight: 800;
     line-height: 25px;
 }
+
+h1 {
+    color: #02033B;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 75px;
+    letter-spacing: -1.2px;
+}
+
+p {
+    color: #02033B;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+h2 {
+    color: #02033B;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 45px;
+    letter-spacing: -0.72px;
+}
+
+h3 {
+    color: #02033B;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+h4 {
+    color: #02033B;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: -0.48px;
+}
+
+h5 {
+    color: #02033B;
+    text-align: center;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 25px;
+    letter-spacing: -0.4px;
+}
+
+.gradientYellow {
+    background: linear-gradient(180deg, #F7C95F 0%, #FDB235 100%);
+}
+
+.gradientBlue {
+    background: linear-gradient(180deg, #2925CC 0%, #4B48E5 100%);
+}
+
+
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+swiper-container {
+    width: 100%;
+    height: 625px;
+    padding-top: 84px;
+}
+
+swiper-slide {
+    width: 400px;
+    height: 305.98px;
+    margin: 30px;
+    user-select: none;
+}
+
+
+
+.mySlide {
+    background: white;
+    width: 400px;
+    height: 305.98px;
+    border-radius: 45px;
+    padding: 36px;
+    position: relative;
+}
+
+.author {
+    color: #02033B;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px;
+}
+
+.author-des {
+    color: #02033B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.mySlide img {
+    width: 147px;
+    height: 25.98px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #02033B;
+}
