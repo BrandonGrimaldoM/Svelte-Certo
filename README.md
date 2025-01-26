@@ -1,4 +1,4 @@
-# Positivus Landing Page Design
+# Certo
 
 Design based on certo's website, which can be found in the figma file "Top 16 Websites of 2024 - Awwwards"
 
