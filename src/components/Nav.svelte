@@ -85,7 +85,7 @@
 		</div>
 
 		<div class="grid place-content-center">
-			<ul class="flex flex-col gap-12 pt-36">
+			<ul class="flex flex-col gap-12 pt-6">
 				<li><a href="/">iPhone</a></li>
 				<li><a href="/">Android</a></li>
 				<li><a href="/">Help</a></li>

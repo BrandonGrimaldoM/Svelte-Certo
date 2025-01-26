@@ -10,6 +10,9 @@ export default {
 		extend: {
 			boxShadow:{
 				"mini": "12px 12px 20px 0px rgba(0, 0, 0, 0.10)"
+			},
+			screens:{
+				"basic": "1440px"
 			}
 		}
 	},

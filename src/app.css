@@ -143,3 +143,19 @@ swiper-slide {
     background: #02033B;
 }
 
+
+@media (max-width: 768px){
+    swiper-slide {
+        width: 300px;
+        height: 400px;
+    }
+    
+    
+    
+    .mySlide {
+        background: white;
+        width: 300px;
+        height: 400px;
+    }
+    
+}
